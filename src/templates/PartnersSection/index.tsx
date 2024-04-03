@@ -7,7 +7,7 @@ const PartnersSection: FC = () => {
   return (
     <section className="bg-blue-dark">
       <div className="container mx-auto py-8 my-8 flex flex-col gap-6">
-        <h2 className="text-[38px] font-bold uppercase">
+        <h2 className="text-[34px] sm:text-[38px] font-bold uppercase">
           {translate("heading-1")}
         </h2>
         <p className="text-[26px] mb-10">

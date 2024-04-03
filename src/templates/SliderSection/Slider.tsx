@@ -1,50 +1,54 @@
 "use client";
-import React, { FC } from "react";
+import { type FC, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-const getMargin = (activeSlide: number, screenType: "mobile" | "desktop") => {
-  if (screenType === "mobile") {
-    switch (activeSlide) {
-      case 0:
-        return "720px";
-      case 1:
-        return "250px";
-      case 2:
-        return "-230px";
-      case 3:
-        return "-720px";
-    }
-  } else if (screenType === "desktop") {
-    switch (activeSlide) {
-      case 0:
-        return "1250px";
-      case 1:
-        return "440px";
-      case 2:
-        return "-460px";
-      case 3:
-        return "-1300px";
-    }
-  }
-};
-
-const getScreenSize = () => {
-  const width =
-    window.innerWidth ||
-    document.documentElement.clientWidth ||
-    document.body.clientWidth;
-  const height =
-    window.innerHeight ||
-    document.documentElement.clientHeight ||
-    document.body.clientHeight;
-
-  return { width, height };
-};
-
 const Slider: FC = () => {
-  const [activeSlide, setActiveSlide] = React.useState(0);
+  const [activeSlide, setActiveSlide] = useState<number>(0);
   const translate = useTranslations("slider-section");
+
+  const getMargin = (activeSlide: number, screenType: "mobile" | "desktop") => {
+    if (screenType === "mobile") {
+      switch (activeSlide) {
+        case 0:
+          return "720px";
+        case 1:
+          return "250px";
+        case 2:
+          return "-230px";
+        case 3:
+          return "-720px";
+      }
+    } else if (screenType === "desktop") {
+      switch (activeSlide) {
+        case 0:
+          return "1250px";
+        case 1:
+          return "440px";
+        case 2:
+          return "-460px";
+        case 3:
+          return "-1300px";
+      }
+    }
+  };
+
+  const getScreenSize = () => {
+    if (typeof window !== "undefined") {
+      const width =
+        window?.innerWidth ||
+        document.documentElement.clientWidth ||
+        document.body.clientWidth;
+      const height =
+        window?.innerHeight ||
+        document.documentElement.clientHeight ||
+        document.body.clientHeight;
+
+      return { width, height };
+    }
+
+    return { width: 0, height: 0 };
+  };
 
   return (
     <div className="relative flex flex-col items-center gap-6 overflow-x-hidden">
