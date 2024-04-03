@@ -16,6 +16,15 @@ const config: Config = {
         mono: ["var(--font-oxygen)"],
       },
     },
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: "1rem",
+        lg: "4rem",
+        xl: "4rem",
+        "2xl": "6rem",
+      },
+    },
   },
   plugins: [],
 };
