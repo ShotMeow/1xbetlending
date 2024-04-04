@@ -37,7 +37,7 @@ const FormSection: FC = () => {
             </div>
             <Field withLabel={false} name="social" placeholder="@username" />
           </div>
-          <Button className="text-[22px] w-3/4 mx-auto mt-6 px-6">
+          <Button className="text-[22px] mx-auto mt-6 px-6">
             {translate("button")}
           </Button>
         </form>

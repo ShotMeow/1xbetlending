@@ -1,11 +1,16 @@
-import { FC } from "react";
-import { useTranslations } from "next-intl";
+import { type FC } from "react";
+import {
+  NextIntlClientProvider,
+  useMessages,
+  useTranslations,
+} from "next-intl";
 import Message from "./Message";
 import Lines from "./Lines";
-import Button from "@/src/shared/Button";
+import Action from "@/src/templates/WaySection/Action";
 
 const WaySection: FC = () => {
   const translate = useTranslations("way-section");
+  const messages = useMessages();
 
   return (
     <section className="container my-20">
@@ -42,9 +47,9 @@ const WaySection: FC = () => {
           message={translate("text-5-content")}
         />
       </div>
-      <div className="flex flex-col items-center mt-20">
-        <Button>{translate("button")}</Button>
-      </div>
+      <NextIntlClientProvider messages={messages}>
+        <Action />
+      </NextIntlClientProvider>
     </section>
   );
 };
