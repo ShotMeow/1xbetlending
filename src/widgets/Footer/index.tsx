@@ -5,18 +5,19 @@ import { useTranslations } from "next-intl";
 const Footer: FC = () => {
   const translate = useTranslations("footer");
   const translateNav = useTranslations("header");
+
   return (
     <footer className="bg-ocean-dark">
       <div className="container py-10 flex flex-col text-center gap-10 lg:gap-0 lg:flex-row justify-between items-center">
         <div className="space-y-4">
           <Image
-            className="mx-auto"
+            className="mx-auto lg:mx-0"
             src="/logo.png"
             alt="1XBET Logo"
             width={166}
             height={33}
           />
-          <p className="text-[12px] font-bold uppercase">
+          <p className="text-[12px] lg:text-start font-bold uppercase">
             {translate("copyright")
               .split("\n")
               .map((line) => (
@@ -30,13 +31,13 @@ const Footer: FC = () => {
         <nav>
           <ul className="flex items-center gap-10 lg:gap-16 lg:flex-row flex-col font-light text-[16px] uppercase">
             <li>
-              <a href="#">{translateNav("nav-item-1")}</a>
+              <a href="#about-us">{translateNav("nav-item-1")}</a>
             </li>
             <li>
-              <a href="#">{translateNav("nav-item-2")}</a>
+              <a href="#looking">{translateNav("nav-item-2")}</a>
             </li>
             <li>
-              <a href="#">{translateNav("nav-item-3")}</a>
+              <a href="#form">{translateNav("nav-item-3")}</a>
             </li>
           </ul>
         </nav>

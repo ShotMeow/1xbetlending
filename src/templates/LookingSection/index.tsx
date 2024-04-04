@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 const LookingSection: FC = () => {
   const translate = useTranslations("looking-section");
   return (
-    <section className="container my-10">
+    <section className="container my-10" id="looking">
       <h2 className="text-[34px] sm:text-[38px] font-bold uppercase mb-6">
         {translate("heading")}
       </h2>

@@ -5,7 +5,7 @@ import Image from "next/image";
 const PartnersSection: FC = () => {
   const translate = useTranslations("partners-section");
   return (
-    <section className="bg-blue-dark">
+    <section className="bg-blue-dark" id="about-us">
       <div className="container mx-auto py-8 my-8 flex flex-col gap-6">
         <h2 className="text-[34px] sm:text-[38px] font-bold uppercase">
           {translate("heading-1")}

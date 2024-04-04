@@ -14,7 +14,7 @@ import Button from "@/src/shared/Button";
 const FormSection: FC = () => {
   const translate = useTranslations("form-section");
   return (
-    <section className="container grid lg:grid-cols-[1fr,2fr] my-20">
+    <section className="container grid lg:grid-cols-[1fr,2fr] my-20" id="form">
       <div className="flex flex-col items-center">
         <h2 className="text-[34px] sm:text-[42px] font-bold uppercase text-center">
           {translate("heading")}
