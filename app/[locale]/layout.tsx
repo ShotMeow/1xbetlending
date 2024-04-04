@@ -27,7 +27,7 @@ const Layout: FC<PropsWithChildren<{ params: { locale: string } }>> = ({
   }
 
   return (
-    <html lang={locale}>
+    <html dir={locale === "ar" ? "rtl" : "ltr"} lang={locale}>
       <body className={`${montserrat.variable} ${oxygen.variable}`}>
         <Header />
         {children}

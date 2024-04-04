@@ -1,53 +1,58 @@
 "use client";
-import { type FC, useState } from "react";
+import { type FC, useEffect, useState } from "react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 const Slider: FC = () => {
+  const [dir, setDir] = useState<"ltr" | "rtl">("ltr");
+  const [screen, setScreen] = useState<"mobile" | "desktop">("desktop");
+
   const [activeSlide, setActiveSlide] = useState<number>(0);
   const translate = useTranslations("slider-section");
 
-  const getMargin = (activeSlide: number, screenType: "mobile" | "desktop") => {
-    if (screenType === "mobile") {
-      switch (activeSlide) {
-        case 0:
-          return "720px";
-        case 1:
-          return "250px";
-        case 2:
-          return "-230px";
-        case 3:
-          return "-720px";
-      }
-    } else if (screenType === "desktop") {
-      switch (activeSlide) {
-        case 0:
-          return "1250px";
-        case 1:
-          return "440px";
-        case 2:
-          return "-460px";
-        case 3:
-          return "-1300px";
-      }
-    }
-  };
+  useEffect(() => {
+    setDir(document.dir === "rtl" ? "rtl" : "ltr");
 
-  const getScreenSize = () => {
     if (typeof window !== "undefined") {
       const width =
         window?.innerWidth ||
         document.documentElement.clientWidth ||
         document.body.clientWidth;
-      const height =
-        window?.innerHeight ||
-        document.documentElement.clientHeight ||
-        document.body.clientHeight;
 
-      return { width, height };
+      if (width >= 768) {
+        setScreen("desktop");
+      } else {
+        setScreen("mobile");
+      }
+    }
+  }, []);
+
+  const getMargin = (activeSlide: number): number => {
+    if (screen === "mobile") {
+      switch (activeSlide) {
+        case 0:
+          return 720;
+        case 1:
+          return 250;
+        case 2:
+          return -230;
+        case 3:
+          return -720;
+      }
+    } else if (screen === "desktop") {
+      switch (activeSlide) {
+        case 0:
+          return 1250;
+        case 1:
+          return 440;
+        case 2:
+          return -460;
+        case 3:
+          return -1300;
+      }
     }
 
-    return { width: 0, height: 0 };
+    return 0;
   };
 
   return (
@@ -56,10 +61,12 @@ const Slider: FC = () => {
         className={`flex items-center gap-40 my-20 transition-all`}
         style={{
           transform: `translateX(${
-            getScreenSize().width <= 768
-              ? getMargin(activeSlide, "mobile")
-              : getMargin(activeSlide, "desktop")
-          })`,
+            dir === "rtl"
+              ? getMargin(activeSlide) > 0
+                ? -getMargin(activeSlide)
+                : Math.abs(getMargin(activeSlide))
+              : getMargin(activeSlide)
+          }px)`,
         }}
       >
         <div
@@ -140,6 +147,9 @@ const Slider: FC = () => {
           onClick={() => setActiveSlide(activeSlide - 1)}
           disabled={activeSlide === 0}
           className="bg-blue-dark w-14 h-14 rounded-full flex items-center justify-center disabled:bg-gray-600"
+          style={{
+            transform: `rotate(${dir === "rtl" ? "180deg" : "0deg"})`,
+          }}
         >
           <svg
             width="17"
@@ -160,6 +170,9 @@ const Slider: FC = () => {
           onClick={() => setActiveSlide(activeSlide + 1)}
           disabled={activeSlide === 3}
           className="bg-blue-dark w-14 h-14 rounded-full flex items-center justify-center disabled:bg-gray-600"
+          style={{
+            transform: `rotate(${dir === "rtl" ? "180deg" : "0deg"})`,
+          }}
         >
           <svg
             width="16"

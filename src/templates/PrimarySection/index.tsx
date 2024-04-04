@@ -20,8 +20,8 @@ const PrimarySection: FC = () => {
         />
         <div className="flex flex-col items-start gap-6">
           <p className="font-bold text-[26px]">{translate("text-1")}</p>
-          <p className="font-oxygen text-[26px]">{translate("text-2")}</p>
-          <Button className="mt-6">{translate("button")}</Button>
+          <p className="font-oxygen text-[26px] mb-6">{translate("text-2")}</p>
+          <Button>{translate("button")}</Button>
         </div>
       </div>
       <div className="flex flex-col items-end gap-2 mt-10">

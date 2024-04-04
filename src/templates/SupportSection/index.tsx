@@ -14,11 +14,11 @@ const SupportSection: FC = () => {
         <h3 className="text-[26px] font-semibold uppercase mt-10">
           {translate("subtitle")}
         </h3>
-        <div className="mt-10 grid lg:grid-cols-[1fr,2fr] items-center gap-10">
+        <div className="grid lg:grid-cols-[2fr,3fr] items-center">
           <Image
             src="/images/support-image.png"
             alt="Support Image"
-            className="mx-auto"
+            className="mx-auto w-full h-full"
             width={408}
             height={408}
           />

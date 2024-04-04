@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import { FC } from "react";
 import { useTranslations } from "next-intl";
 import Message from "./Message";
 import Lines from "./Lines";
@@ -6,6 +6,7 @@ import Button from "@/src/shared/Button";
 
 const WaySection: FC = () => {
   const translate = useTranslations("way-section");
+
   return (
     <section className="container my-20">
       <div className="flex flex-col items-end uppercase font-bold">
@@ -41,8 +42,8 @@ const WaySection: FC = () => {
           message={translate("text-5-content")}
         />
       </div>
-      <div className="flex flex-col items-center">
-        <Button className="mt-20">{translate("button")}</Button>
+      <div className="flex flex-col items-center mt-20">
+        <Button>{translate("button")}</Button>
       </div>
     </section>
   );

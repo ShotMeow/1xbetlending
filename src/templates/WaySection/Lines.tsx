@@ -1,6 +1,13 @@
-import type { FC } from "react";
+"use client";
+import { FC, useEffect, useState } from "react";
 
 const Lines: FC = () => {
+  const [dir, setDir] = useState<"ltr" | "rtl">("ltr");
+
+  useEffect(() => {
+    setDir(document.dir === "rtl" ? "rtl" : "ltr");
+  }, []);
+
   return (
     <svg
       width="1249"
@@ -9,6 +16,9 @@ const Lines: FC = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="2xl:block hidden"
+      style={{
+        transform: `translateX(${dir === "rtl" ? "-80px" : "0"})`,
+      }}
     >
       <g className="mix-blend-plus-lighter" filter="url(#filter0_f_2001_393)">
         <path
