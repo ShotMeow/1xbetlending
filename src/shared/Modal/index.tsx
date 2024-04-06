@@ -71,7 +71,7 @@ const Modal: FC<Props> = ({ setIsShown }) => {
             <h3 className="text-[38px] mt-6 z-20 font-bold uppercase text-white">
               {translate("subtitle")}
             </h3>
-            <Button darkMode className="px-10 z-20">
+            <Button darkMode className="md:text-[18px] px-6">
               {translateForm("button")}
               <svg
                 width="14"

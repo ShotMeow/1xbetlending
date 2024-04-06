@@ -6,6 +6,7 @@ import { locales } from "@/i18n";
 import { notFound } from "next/navigation";
 
 import "../globals.css";
+import { Metadata } from "next";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -17,6 +18,12 @@ const oxygen = Oxygen({
   variable: "--font-oxygen",
   weight: ["400", "700"],
 });
+
+export const metadata: Metadata = {
+  title: "1XBET",
+  description:
+    "Discover the power of partnership with one of the biggest betting company in the world!",
+};
 
 const Layout: FC<PropsWithChildren<{ params: { locale: string } }>> = ({
   children,

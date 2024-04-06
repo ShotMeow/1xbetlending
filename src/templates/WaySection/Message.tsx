@@ -1,4 +1,5 @@
 import type { FC, HTMLAttributes } from "react";
+import classNames from "classnames";
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
   serial: number;
@@ -14,11 +15,15 @@ const Message: FC<Props> = ({
   ...props
 }) => {
   return (
-    <div className={`2xl:absolute ${className}`} {...props}>
+    <div className={classNames("2xl:absolute", className)} {...props}>
       <article
-        className={`relative bg-white rounded-lg p-6 font-bold ${
-          !heading ? "2xl:h-[149px]" : ""
-        } flex items-center`}
+        className={classNames(
+          {
+            "2xl:h-[149px]": !heading,
+            "flex items-center": heading,
+          },
+          "relative bg-white rounded-lg p-6 font-bold",
+        )}
       >
         <span className="absolute hidden 2xl:block text-[100px] 2xl:text-[200px] z-30 left-6 -top-10 2xl:-top-20 text-blue-light opacity-20">
           {serial}

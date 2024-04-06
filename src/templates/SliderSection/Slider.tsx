@@ -33,9 +33,9 @@ const Slider: FC = () => {
         case 0:
           return 720;
         case 1:
-          return 250;
+          return 240;
         case 2:
-          return -230;
+          return -240;
         case 3:
           return -720;
       }
@@ -150,6 +150,7 @@ const Slider: FC = () => {
         <button
           onClick={() => setActiveSlide(activeSlide - 1)}
           disabled={activeSlide === 0}
+          aria-label="Previous Slide Button"
           className="bg-blue-dark w-14 h-14 rounded-full flex items-center justify-center disabled:bg-gray-600"
           style={{
             transform: `rotate(${dir === "rtl" ? "180deg" : "0deg"})`,
@@ -173,6 +174,7 @@ const Slider: FC = () => {
         <button
           onClick={() => setActiveSlide(activeSlide + 1)}
           disabled={activeSlide === 3}
+          aria-label="Next Slide Button"
           className="bg-blue-dark w-14 h-14 rounded-full flex items-center justify-center disabled:bg-gray-600"
           style={{
             transform: `rotate(${dir === "rtl" ? "180deg" : "0deg"})`,
