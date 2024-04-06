@@ -7,7 +7,7 @@ const Header: FC = () => {
   const translate = useTranslations("header");
 
   return (
-    <header className="lg:fixed lg:w-full bg-ocean-dark my-8 py-8">
+    <header className="lg:fixed lg:w-full z-50 bg-ocean-dark my-8 py-8">
       <div className="container mx-auto flex lg:flex-row lg:gap-0 gap-10 flex-col items-center justify-between">
         <Image src="/logo.png" alt="1XBET" width={166} height={32} />
         <nav>
