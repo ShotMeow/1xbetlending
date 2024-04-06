@@ -16,7 +16,7 @@ const Button: FC<PropsWithChildren<Props>> = ({
           ? "bg-transparent border-2 border-white text-white"
           : "bg-green"
       } flex items-center gap-4 text-center rounded-md py-3 font-bold uppercase ${
-        className ? className : "text-[26px] px-24"
+        className ? className : "text-[20px] md:text-[26px] px-24"
       }`}
       {...props}
     >

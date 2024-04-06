@@ -16,9 +16,9 @@ const Field: FC<Props> = ({
       {withLabel && <span className="uppercase mb-1">{name}*</span>}
       <input
         className={`
-          "bg-transparent border-2 uppercase ${
+          "bg-transparent border-2 uppercase flex ${
             darkMode ? "border-ocean-light" : "border-white"
-          } rounded-md py-4 px-6 placeholder:text-[22px] placeholder:uppercase"
+          } rounded-md pb-3 pt-4 px-6 placeholder:text-[22px] placeholder:uppercase"
         `}
         {...props}
       />

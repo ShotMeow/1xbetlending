@@ -1,14 +1,19 @@
 import type { FC } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import Button from "@/src/shared/Button";
+import {
+  NextIntlClientProvider,
+  useMessages,
+  useTranslations,
+} from "next-intl";
+import Action from "./Action";
 
 const PrimarySection: FC = () => {
   const translate = useTranslations("primary-section");
+  const messages = useMessages();
 
   return (
-    <section className="container mx-auto">
-      <h1 className="font-bold text-[38px] uppercase w-3/4">
+    <section className="container mx-auto lg:pt-40">
+      <h1 className="font-bold text-[24px] text-center md:text-left md:text-[38px] uppercase md:w-3/4">
         {translate("heading-1")}
       </h1>
       <div className="flex lg:flex-row flex-col items-center">
@@ -19,13 +24,21 @@ const PrimarySection: FC = () => {
           height={485}
         />
         <div className="flex flex-col items-start gap-6">
-          <p className="font-bold text-[26px]">{translate("text-1")}</p>
-          <p className="font-oxygen text-[26px] mb-6">{translate("text-2")}</p>
-          <Button>{translate("button")}</Button>
+          <p className="font-bold text-[20px] md:text-[26px]">
+            {translate("text-1")}
+          </p>
+          <p className="font-oxygen text-[20px] md:text-[26px] mb-6">
+            {translate("text-2")}
+          </p>
+          <NextIntlClientProvider messages={messages}>
+            <Action />
+          </NextIntlClientProvider>
         </div>
       </div>
       <div className="flex flex-col items-end gap-2 mt-10">
-        <p className="text-[20px] uppercase">{translate("learn-more")}</p>
+        <p className="text-[16px] md:text-[20px] uppercase">
+          {translate("learn-more")}
+        </p>
         <svg
           width="16"
           height="51"

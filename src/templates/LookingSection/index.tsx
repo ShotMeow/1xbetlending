@@ -5,10 +5,10 @@ const LookingSection: FC = () => {
   const translate = useTranslations("looking-section");
   return (
     <section className="container my-10" id="looking">
-      <h2 className="text-[34px] sm:text-[38px] font-bold uppercase mb-6">
+      <h2 className="text-[20px] text-center md:text-left sm:text-[38px] font-bold uppercase mb-6">
         {translate("heading")}
       </h2>
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 text-center items-center">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-20 text-center items-center">
         <li className="flex flex-col items-center gap-4">
           <svg
             width="82"
@@ -31,7 +31,7 @@ const LookingSection: FC = () => {
               strokeWidth="3"
             />
           </svg>
-          <p className="uppercase text-[20px] sm:text-[24px] font-semibold">
+          <p className="uppercase text-[18px] md:text-[24px] font-semibold">
             {translate("text-1")}
           </p>
         </li>
@@ -70,7 +70,7 @@ const LookingSection: FC = () => {
               strokeWidth="2"
             />
           </svg>
-          <p className="font-semibold uppercase text-[20px] sm:text-[24px]">
+          <p className="font-semibold uppercase text-[18px] md:text-[24px]">
             {translate("text-2")}
           </p>
         </li>
@@ -127,7 +127,7 @@ const LookingSection: FC = () => {
               fill="#14A0FF"
             />
           </svg>
-          <p className="font-semibold uppercase text-[20px] sm:text-[24px]">
+          <p className="font-semibold uppercase text-[18px] md:text-[24px]">
             {translate("text-3")}
           </p>
         </li>
@@ -180,7 +180,7 @@ const LookingSection: FC = () => {
               strokeWidth="2"
             />
           </svg>
-          <p className="font-semibold uppercase text-[20px] sm:text-[24px]">
+          <p className="font-semibold uppercase text-[18px] md:text-[24px]">
             {translate("text-4")}
           </p>
         </li>
@@ -281,7 +281,7 @@ const LookingSection: FC = () => {
               strokeLinecap="round"
             />
           </svg>
-          <p className="font-semibold uppercase text-[20px] sm:text-[24px]">
+          <p className="font-semibold uppercase text-[18px] md:text-[24px]">
             {translate("text-5")}
           </p>
         </li>
@@ -355,12 +355,12 @@ const LookingSection: FC = () => {
               strokeWidth="3"
             />
           </svg>
-          <p className="font-semibold uppercase text-[20px] sm:text-[24px]">
+          <p className="font-semibold uppercase text-[18px] md:text-[24px]">
             {translate("text-6")}
           </p>
         </li>
       </ul>
-      <p className="text-[26px] font-medium text-center mt-20">
+      <p className="text-[20px] md:text-[26px] font-medium text-center mt-20">
         {translate("text-7")}
       </p>
     </section>

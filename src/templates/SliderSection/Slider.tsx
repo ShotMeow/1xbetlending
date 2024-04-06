@@ -58,7 +58,7 @@ const Slider: FC = () => {
   return (
     <div className="relative flex flex-col items-center gap-6 overflow-x-hidden">
       <div
-        className={`flex items-center gap-40 my-20 transition-all`}
+        className={`flex items-center gap-40 my-8 md:my-20 transition-all`}
         style={{
           transform: `translateX(${
             dir === "rtl"
@@ -77,10 +77,11 @@ const Slider: FC = () => {
           <Image
             src="/images/slider/data-screen-1.png"
             alt="Global Research Image"
+            className="w-28 md:w-auto"
             width={162}
             height={190}
           />
-          <div className="text-[27px] flex flex-col items-center text-center">
+          <div className="text-[20px] md:text-[27px] flex flex-col items-center text-center">
             <h3 className="font-bold uppercase">
               {translate("slider-1-heading")}
             </h3>
@@ -95,10 +96,11 @@ const Slider: FC = () => {
           <Image
             src="/images/slider/data-screen-2.png"
             alt="Competitive Commissions Image"
+            className="w-28 md:w-auto"
             width={201}
             height={190}
           />
-          <div className="text-[27px] flex flex-col items-center text-center">
+          <div className="text-[20px] md:text-[27px] flex flex-col items-center text-center">
             <h3 className="font-bold uppercase">
               {translate("slider-2-heading")}
             </h3>
@@ -113,10 +115,11 @@ const Slider: FC = () => {
           <Image
             src="/images/slider/data-screen-3.png"
             alt="Industry Experience Image"
+            className="w-28 md:w-auto"
             width={162}
             height={155}
           />
-          <div className="text-[27px] flex flex-col items-center text-center">
+          <div className="text-[20px] md:text-[27px] flex flex-col items-center text-center">
             <h3 className="font-bold uppercase">
               {translate("slider-3-heading")}
             </h3>
@@ -131,10 +134,11 @@ const Slider: FC = () => {
           <Image
             src="/images/slider/data-screen-4.png"
             alt="Innovative Technology Image"
+            className="w-28 md:w-auto"
             width={162}
             height={177}
           />
-          <div className="text-[27px] flex flex-col items-center text-center">
+          <div className="text-[20px] md:text-[27px] flex flex-col items-center text-center">
             <h3 className="font-bold uppercase">
               {translate("slider-4-heading")}
             </h3>

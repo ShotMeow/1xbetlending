@@ -13,7 +13,7 @@ const SliderSection: FC = () => {
   return (
     <section>
       <div className="container mx-auto">
-        <h2 className="text-[34px] sm:text-[38px] font-bold uppercase">
+        <h2 className="text-[20px] text-center md:text-left sm:text-[38px] font-bold uppercase">
           {translate("heading")}
         </h2>
       </div>

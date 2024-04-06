@@ -15,8 +15,10 @@ const WaySection: FC = () => {
   return (
     <section className="container my-20">
       <div className="flex flex-col items-end uppercase font-bold">
-        <h2 className="text-[34px] sm:text-[38px]">{translate("heading")}</h2>
-        <h3 className="font-oxygen text-[26px]">{translate("subtitle")}</h3>
+        <h2 className="text-[20px]  sm:text-[38px]">{translate("heading")}</h2>
+        <h3 className="font-oxygen text-[18px] sm:text-[26px]">
+          {translate("subtitle")}
+        </h3>
       </div>
       <div className="relative mt-20 space-y-6 2xl:space-y-0">
         <Lines />

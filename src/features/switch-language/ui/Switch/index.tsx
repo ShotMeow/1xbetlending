@@ -20,7 +20,7 @@ const Switch: FC = () => {
         className="flex items-center gap-2"
       >
         {getFlag(locale)}
-        <span className="uppercase text-[22px] font-semibold">{locale}</span>
+        <span className="uppercase md:text-[22px] font-semibold">{locale}</span>
         <svg
           className={dropdownShown ? "rotate-180" : ""}
           width="16"

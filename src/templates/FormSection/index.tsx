@@ -16,7 +16,7 @@ const FormSection: FC = () => {
   return (
     <section className="container grid lg:grid-cols-[1fr,2fr] my-20" id="form">
       <div className="flex flex-col items-center">
-        <h2 className="text-[34px] sm:text-[42px] font-bold uppercase text-center">
+        <h2 className="text-[20px] text-center md:text-left sm:text-[38px] font-bold uppercase text-center">
           {translate("heading")}
         </h2>
         <form className="flex flex-col w-full gap-4">
@@ -44,7 +44,7 @@ const FormSection: FC = () => {
       </div>
       <div className="flex flex-col">
         <div className="flex flex-col items-center lg:items-start lg:ml-40 lg:self-end mt-20 lg:mt-0 gap-10">
-          <h2 className="text-[30px] sm:text-[32px] font-bold uppercase text-center ">
+          <h2 className="text-[20px] text-center md:text-left sm:text-[38px] font-bold uppercase text-center ">
             {translate("subtitle")}
           </h2>
           <ul className="flex flex-col gap-6">
