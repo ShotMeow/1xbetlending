@@ -1,4 +1,5 @@
 import type { FC, InputHTMLAttributes } from "react";
+import classNames from "classnames";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   withLabel?: boolean;
@@ -15,11 +16,12 @@ const Field: FC<Props> = ({
     <label className="flex flex-col">
       {withLabel && <span className="uppercase mb-1">{name}*</span>}
       <input
-        className={`
-          "bg-transparent border-2 uppercase flex ${
-            darkMode ? "border-ocean-light" : "border-white"
-          } rounded-md pb-3 pt-4 px-6 placeholder:text-[22px] placeholder:uppercase"
-        `}
+        className={classNames(
+          {
+            "border-ocean-light": darkMode,
+          },
+          "rounded-md py-3 sm:pt-4 sm:pb-3 px-6 placeholder:text-[16px] md:placeholder:text-[22px] placeholder:uppercase bg-transparent border-2 uppercase flex",
+        )}
         {...props}
       />
     </label>

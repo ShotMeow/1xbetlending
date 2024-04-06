@@ -16,21 +16,24 @@ const FormSection: FC = () => {
   return (
     <section className="container grid lg:grid-cols-[1fr,2fr] my-20" id="form">
       <div className="flex flex-col items-center">
-        <h2 className="text-[20px] text-center md:text-left sm:text-[38px] font-bold uppercase text-center">
+        <h2 className="text-[20px] text-center sm:text-[38px] font-bold uppercase">
           {translate("heading")}
         </h2>
         <form className="flex flex-col w-full gap-4">
-          <Field required name="name" placeholder={translate("input-1")} />
           <Field
             required
-            name="e-mail"
+            name={translate("input-1")}
+            placeholder={translate("input-1")}
+          />
+          <Field
+            required
+            name={translate("input-2")}
             type="email"
             placeholder="example@mail.com"
           />
-          <Field required name="country" />
-          <Field required name="phone" type="tel" />
-          <Field required name="country" />
-          <div>
+          <Field required name={translate("input-3")} />
+          <Field required name={translate("input-4")} type="tel" />
+          <div className="mt-10">
             <div className="flex items-center gap-6 mb-2">
               <Radio label="telegram" name="social" />
               <Radio label="whatsapp" name="social" />
@@ -44,7 +47,7 @@ const FormSection: FC = () => {
       </div>
       <div className="flex flex-col">
         <div className="flex flex-col items-center lg:items-start lg:ml-40 lg:self-end mt-20 lg:mt-0 gap-10">
-          <h2 className="text-[20px] text-center md:text-left sm:text-[38px] font-bold uppercase text-center ">
+          <h2 className="text-[16px] text-center md:text-left sm:text-[32px] font-bold uppercase">
             {translate("subtitle")}
           </h2>
           <ul className="flex flex-col gap-6">
@@ -89,7 +92,7 @@ const FormSection: FC = () => {
           alt="Welcome Image"
           width={660}
           height={480}
-          className="w-full"
+          className="w-full lg:ml-20"
         />
       </div>
     </section>

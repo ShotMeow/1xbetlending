@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import Field from "@/src/shared/Field";
 import Radio from "@/src/shared/Radio";
 import Button from "@/src/shared/Button";
+import classNames from "classnames";
 
 interface Props {
   setIsShown: Dispatch<SetStateAction<boolean>>;
@@ -22,19 +23,23 @@ const Modal: FC<Props> = ({ setIsShown }) => {
             <Field
               darkMode
               required
-              name="name"
+              name={translateForm("input-1")}
               placeholder={translateForm("input-1")}
             />
             <Field
               darkMode
               required
-              name="e-mail"
+              name={translateForm("input-2")}
               type="email"
               placeholder="example@mail.com"
             />
-            <Field darkMode required name="country" />
-            <Field darkMode required name="phone" type="tel" />
-            <Field darkMode required name="country" />
+            <Field darkMode required name={translateForm("input-3")} />
+            <Field
+              darkMode
+              required
+              name={translateForm("input-4")}
+              type="tel"
+            />
             <div>
               <div className="flex items-center gap-6 my-2">
                 <Radio darkMode label="telegram" name="social" />
@@ -79,6 +84,9 @@ const Modal: FC<Props> = ({ setIsShown }) => {
                 viewBox="0 0 14 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
+                className={classNames({
+                  "rotate-180": document.dir === "rtl",
+                })}
               >
                 <path
                   d="M13.0607 13.0607C13.6464 12.4749 13.6464 11.5251 13.0607 10.9393L3.51472 1.3934C2.92893 0.807611 1.97919 0.807611 1.3934 1.3934C0.807611 1.97919 0.807611 2.92893 1.3934 3.51472L9.87868 12L1.3934 20.4853C0.807611 21.0711 0.807611 22.0208 1.3934 22.6066C1.97919 23.1924 2.92893 23.1924 3.51472 22.6066L13.0607 13.0607ZM10 13.5H12V10.5H10V13.5Z"
