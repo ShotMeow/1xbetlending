@@ -1,32 +1,34 @@
 import type { FC } from "react";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Switch from "@/src/features/switch-language/ui/Switch";
-import Link from "next/link";
+
+import Action from "./Action";
+import Navigation from "./Navigation";
+import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 
 const Header: FC = () => {
-  const translate = useTranslations("header");
+  const messages = useMessages();
+  const locale = useLocale();
 
   return (
-    <header className="lg:fixed lg:w-full z-50 bg-ocean-dark my-8 py-8">
-      <div className="container mx-auto flex lg:flex-row lg:gap-0 gap-10 flex-col items-center justify-between">
+    <header className="fixed w-full z-50 bg-ocean-dark my-8 py-8">
+      <div className="container mx-auto flex lg:gap-0 gap-4 items-center justify-between">
         <a href="#primary">
-          <Image src="/logo.png" alt="1XBET" width={166} height={32} />
+          <Image
+            src="/logo.png"
+            alt="1XBET"
+            width={166}
+            height={32}
+            className="w-32 sm:w-[166px]"
+          />
         </a>
-        <nav>
-          <ul className="flex items-center gap-10 lg:gap-16 lg:flex-row flex-col font-light text-[22px] uppercase">
-            <li>
-              <a href="#about-us">{translate("nav-item-1")}</a>
-            </li>
-            <li>
-              <a href="#looking">{translate("nav-item-2")}</a>
-            </li>
-            <li>
-              <a href="#form">{translate("nav-item-3")}</a>
-            </li>
-          </ul>
-        </nav>
-        <Switch />
+        <Navigation className="hidden lg:block" />
+        <div className="flex items-center gap-4 sm:gap-6">
+          <Switch />
+          <NextIntlClientProvider messages={messages}>
+            <Action />
+          </NextIntlClientProvider>
+        </div>
       </div>
     </header>
   );

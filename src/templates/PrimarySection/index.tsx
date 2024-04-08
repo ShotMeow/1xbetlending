@@ -12,7 +12,7 @@ const PrimarySection: FC = () => {
   const messages = useMessages();
 
   return (
-    <section className="container mx-auto lg:pt-40" id="primary">
+    <section className="container mx-auto pt-40" id="primary">
       <h1 className="font-bold text-[24px] text-center md:text-left md:text-[38px] uppercase md:w-3/4">
         {translate("heading-1")}
       </h1>

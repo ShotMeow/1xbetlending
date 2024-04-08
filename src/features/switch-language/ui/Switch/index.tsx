@@ -14,15 +14,17 @@ const Switch: FC = () => {
   const locale = useLocale();
 
   return (
-    <div>
+    <div className="z-20">
       <button
         onClick={() => setDropdownShown(!dropdownShown)}
-        className="flex items-center gap-2"
+        className="flex items-center gap-2 active:scale-95 transition-transform"
       >
         {getFlag(locale)}
         <span className="uppercase md:text-[22px] font-semibold">{locale}</span>
         <svg
-          className={dropdownShown ? "rotate-180" : ""}
+          className={`flex-shrink-0 transition-all duration-300 ${
+            dropdownShown ? "rotate-180" : ""
+          }`}
           width="16"
           height="9"
           viewBox="0 0 16 9"
