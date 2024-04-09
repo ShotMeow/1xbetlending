@@ -7,7 +7,7 @@ const Slider: FC = () => {
   const [dir, setDir] = useState<"ltr" | "rtl">("ltr");
   const [screen, setScreen] = useState<"mobile" | "desktop">("desktop");
 
-  const [activeSlide, setActiveSlide] = useState<number>(0);
+  const [activeSlide, setActiveSlide] = useState<number>(1);
   const translate = useTranslations("slider-section");
 
   useEffect(() => {
