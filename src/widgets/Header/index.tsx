@@ -8,10 +8,9 @@ import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 
 const Header: FC = () => {
   const messages = useMessages();
-  const locale = useLocale();
 
   return (
-    <header className="fixed w-full z-50 bg-ocean-dark my-8 py-8">
+    <header className="sticky w-full z-50 bg-ocean-dark top-0 my-8 py-8">
       <div className="container mx-auto flex lg:gap-0 gap-4 items-center justify-between">
         <a href="#primary">
           <Image

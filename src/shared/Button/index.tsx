@@ -17,7 +17,7 @@ const Button: FC<PropsWithChildren<Props>> = ({
           "bg-green": !darkMode,
           "bg-transparent border-2 border-white text-white": darkMode,
         },
-        "flex items-center gap-4 text-center rounded-md py-3 font-bold uppercase text-[20px] md:text-[26px] px-24",
+        "flex items-center justify-center gap-4 text-center rounded-md py-3 font-bold uppercase text-[20px] md:text-[26px] px-24",
         className,
       )}
       {...props}

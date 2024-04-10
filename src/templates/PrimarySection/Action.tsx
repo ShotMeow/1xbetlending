@@ -1,21 +1,27 @@
 "use client";
-import React, { FC, useState } from "react";
+import React, { FC, HTMLAttributes, useState } from "react";
 import Button from "@/src/shared/Button";
 import Modal from "@/src/shared/Modal";
 import { useTranslations } from "next-intl";
 
-const Action: FC = () => {
+interface Props extends HTMLAttributes<HTMLDivElement> {}
+
+const Action: FC<Props> = ({ ...props }) => {
   const [modalShown, setIsModalShown] = useState<boolean>(false);
   const translate = useTranslations("primary-section");
   return (
-    <>
-      <div className="flex flex-col items-center">
-        <Button onClick={() => setIsModalShown(true)}>
-          {translate("button")}
-        </Button>
-      </div>
+    <div {...props}>
+      <Button onClick={() => setIsModalShown(true)}>
+        {translate("button")}
+      </Button>
+      <Button
+        className="fixed bottom-4 left-4 right-4 lg:left-auto z-50"
+        onClick={() => setIsModalShown(true)}
+      >
+        {translate("button")}
+      </Button>
       {modalShown && <Modal setIsShown={setIsModalShown} />}
-    </>
+    </div>
   );
 };
 
