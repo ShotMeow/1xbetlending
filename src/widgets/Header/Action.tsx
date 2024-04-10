@@ -50,7 +50,7 @@ const Action: FC = () => {
               "max-h-0": !dropdownShown,
               "max-h-96 mt-2 py-6": dropdownShown,
             },
-            "fixed transition-all overflow-hidden left-0 top-28  bg-ocean-dark w-full",
+            "absolute transition-all overflow-hidden left-0 top-20  bg-ocean-dark w-full",
           )}
         >
           <Dropdown />

@@ -14,7 +14,7 @@ const Switch: FC = () => {
   const locale = useLocale();
 
   return (
-    <div className="z-20">
+    <div className="z-50">
       <button
         onClick={() => setDropdownShown(!dropdownShown)}
         className="flex items-center gap-2 active:scale-95 transition-transform"
