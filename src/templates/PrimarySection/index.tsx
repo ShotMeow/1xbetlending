@@ -1,4 +1,4 @@
-import type { FC } from "react";
+import { FC } from "react";
 import Image from "next/image";
 import {
   NextIntlClientProvider,
@@ -10,7 +10,6 @@ import Action from "./Action";
 const PrimarySection: FC = () => {
   const translate = useTranslations("primary-section");
   const messages = useMessages();
-
   return (
     <section className="container mx-auto" id="primary">
       <h1 className="font-bold text-[24px] text-center md:text-left md:text-[38px] uppercase md:w-3/4">
@@ -18,6 +17,7 @@ const PrimarySection: FC = () => {
       </h1>
       <div className="flex lg:flex-row flex-col items-center">
         <Image
+          id="primary-image"
           src="/images/share-market.png"
           alt="Share Market Image"
           width={647}
