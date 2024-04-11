@@ -41,7 +41,7 @@ const Modal: FC<Props> = ({ setIsShown }) => {
               type="tel"
             />
             <div>
-              <div className="flex items-center gap-6 my-2">
+              <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 my-2">
                 <Radio darkMode label="telegram" name="social" />
                 <Radio darkMode label="whatsapp" name="social" />
               </div>
