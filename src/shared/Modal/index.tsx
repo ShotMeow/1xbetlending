@@ -13,11 +13,11 @@ const Modal: FC<Props> = ({ setIsShown }) => {
   const translate = useTranslations("modal");
   const translateForm = useTranslations("form-section");
   return (
-    <div className="fixed z-50 left-0 top-0 w-full h-full bg-black/40 flex items-start md:py-10 lg:items-center overflow-y-auto justify-center">
-      <div className="bg-white border-blue-light border rounded-md text-ocean-dark p-4 w-full md:w-3/4">
-        <form className="relative grid xl:grid-cols-[2fr,1fr] gap-4">
-          <div className="flex flex-col p-4">
-            <h2 className="text-[20px] text-center md:text-left sm:text-[38px] text-ocean-light font-bold uppercase">
+    <div className="fixed z-50 left-0 top-0 w-full h-full bg-black/40 flex items-start md:py-10 xl:items-center overflow-y-auto justify-center">
+      <div className="xl:h-5/6 bg-white border-blue-light border rounded-md text-ocean-dark p-4 w-full md:w-3/4">
+        <form className="relative flex xl:flex-row flex-col-reverse justify-between gap-4 h-full">
+          <div className="flex flex-col p-4 w-full">
+            <h2 className="text-[20px] text-center md:text-left sm:text-[38px] text-[#015291] font-bold uppercase">
               {translate("heading")}
             </h2>
             <Field
@@ -53,11 +53,11 @@ const Modal: FC<Props> = ({ setIsShown }) => {
               />
             </div>
           </div>
-          <div className="bg-[url('/logo-dark.png')] bg-contain bg-no-repeat bg-center xl:-top-8 xl:h-[calc(100%+60px)] relative rounded-lg bg-ocean-dark text-center flex flex-col items-center justify-center gap-20 p-10">
+          <div className="bg-[url('/logo-dark.png')] bg-contain bg-no-repeat bg-center xl:-top-8 xl:h-[calc(100%+60px)] relative rounded-lg bg-[#015291] text-center flex flex-col items-center justify-center gap-20 p-10">
             <button
               type="button"
               onClick={() => setIsShown(false)}
-              className="bg-ocean-dark hover:bg-ocean-light text-ocean-light font-bold py-2 px-4 rounded-md absolute top-4 right-4"
+              className=" text-white font-bold py-2 px-4 rounded-md absolute top-4 right-4"
             >
               <svg
                 width="30"
