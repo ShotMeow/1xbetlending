@@ -19,58 +19,58 @@ const WaySection: FC = () => {
           {translate("subtitle")}
         </h3>
       </div>
-      <div className="relative mt-20 space-y-6 2xl:space-y-0">
+      <div className="relative mt-20 space-y-12 2xl:space-y-0">
         <Lines />
-        <article className="relative bg-white rounded-lg p-6 font-bold flex h-[149px] 2xl:absolute 2xl:w-[586px] 2xl:left-0 2xl:top-0">
-          <div className="overflow-y-auto z-40">
+        <article className="relative bg-white rounded-lg p-6 font-bold flex 2xl:h-[149px] 2xl:absolute 2xl:w-[586px] 2xl:left-0 2xl:top-0">
+          <div className="z-40">
             <p className="text-[20px] md:text-[26px] text-ocean-dark">
               {translate("text-1")}
             </p>
           </div>
-          <span className="absolute text-[214px] z-30 left-6 -top-[88px] text-blue-light opacity-20">
+          <span className="absolute text-[70px] -top-[50px] 2xl:text-[214px] z-30 left-6 2xl:-top-[88px] text-blue-light 2xl:opacity-20">
             1
           </span>
           <div className="absolute w-full h-full -z-10 top-2 left-2 bg-none border-4 border-blue-light rounded-xl" />
         </article>
-        <article className="relative bg-white rounded-lg p-6 font-bold flex h-[149px] 2xl:absolute 2xl:w-[612px] 2xl:right-[15px] 2xl:top-[90px]">
-          <div className="overflow-y-auto z-40">
+        <article className="relative bg-white rounded-lg p-6 font-bold flex 2xl:h-[149px] 2xl:absolute 2xl:w-[612px] 2xl:right-[15px] 2xl:top-[90px]">
+          <div className="z-40">
             <p className="text-[20px] md:text-[26px] text-ocean-dark">
               {translate("text-2")}
             </p>
           </div>
-          <span className="absolute text-[214px] z-30 left-6 -top-[88px] text-blue-light opacity-20">
+          <span className="absolute text-[70px] -top-[50px] 2xl:text-[214px] z-30 left-6 2xl:-top-[88px] text-blue-light 2xl:opacity-20">
             2
           </span>
           <div className="absolute w-full h-full -z-10 top-2 left-2 bg-none border-4 border-blue-light rounded-xl" />
         </article>
-        <article className="relative bg-white rounded-lg p-6 font-bold flex h-[149px] 2xl:absolute 2xl:w-[754px] 2xl:left-0 2xl:top-[300px]">
-          <div className="overflow-y-auto z-40">
+        <article className="relative bg-white rounded-lg p-6 font-bold flex 2xl:h-[149px] 2xl:absolute 2xl:w-[754px] 2xl:left-0 2xl:top-[300px]">
+          <div className="z-40">
             <p className="text-[20px] md:text-[26px] text-ocean-dark">
               {translate("text-3")}
             </p>
           </div>
-          <span className="absolute text-[214px] z-30 left-6 -top-[88px] text-blue-light opacity-20">
+          <span className="absolute text-[70px] -top-[50px] 2xl:text-[214px] z-30 left-6 2xl:-top-[88px] text-blue-light 2xl:opacity-20">
             3
           </span>
           <div className="absolute w-full h-full -z-10 top-2 left-2 bg-none border-4 border-blue-light rounded-xl" />
         </article>
-        <article className="relative bg-white rounded-lg p-6 font-bold flex h-[149px] 2xl:absolute 2xl:w-[393px] 2xl:right-[130px] 2xl:top-[400px]">
-          <div className="overflow-y-auto z-40">
+        <article className="relative bg-white rounded-lg p-6 font-bold flex 2xl:h-[149px] 2xl:absolute 2xl:w-[393px] 2xl:right-[130px] 2xl:top-[400px]">
+          <div className="z-40">
             <p className="text-[20px] md:text-[26px] text-ocean-dark">
               {translate("text-4")}
             </p>
           </div>
-          <span className="absolute text-[214px] z-30 left-6 -top-[88px] text-blue-light opacity-20">
+          <span className="absolute text-[70px] -top-[50px] 2xl:text-[214px] z-30 left-6 2xl:-top-[88px] text-blue-light 2xl:opacity-20">
             4
           </span>
           <div className="absolute w-full h-full -z-10 top-2 left-2 bg-none border-4 border-blue-light rounded-xl" />
         </article>
-        <article className="relative bg-white rounded-lg p-6 font-bold flex h-[200px] 2xl:absolute 2xl:bottom-0">
-          <div className="overflow-y-auto z-40 text-[20px] md:text-[26px] text-ocean-dark">
+        <article className="relative bg-white rounded-lg p-6 font-bold flex 2xl:h-[200px] 2xl:absolute 2xl:bottom-0">
+          <div className="z-40 text-[20px] md:text-[26px] text-ocean-dark">
             <h4 className="uppercase mb-6">{translate("text-5-heading")}</h4>
             <span>{translate("text-5-content")}</span>
           </div>
-          <span className="absolute text-[279px] z-30 left-6 -top-[114px] text-blue-light opacity-20">
+          <span className="absolute text-[70px] -top-[50px] 2xl:text-[214px] z-30 left-6 2xl:-top-[88px] text-blue-light 2xl:opacity-20">
             5
           </span>
           <div className="absolute w-full h-full -z-10 top-2 left-2 bg-none border-4 border-blue-light rounded-xl" />
