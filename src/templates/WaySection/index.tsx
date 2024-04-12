@@ -70,7 +70,7 @@ const WaySection: FC = () => {
             <h4 className="uppercase mb-6">{translate("text-5-heading")}</h4>
             <span>{translate("text-5-content")}</span>
           </div>
-          <span className="absolute text-[70px] -top-[50px] 2xl:text-[214px] z-30 left-6 2xl:-top-[88px] text-blue-light 2xl:opacity-20">
+          <span className="absolute text-[70px] -top-[50px] 2xl:text-[278px] z-30 left-6 2xl:-top-[112px] text-blue-light 2xl:opacity-20">
             5
           </span>
           <div className="absolute w-full h-full -z-10 top-2 left-2 bg-none border-4 border-blue-light rounded-xl" />
