@@ -14,10 +14,11 @@ const Button: FC<PropsWithChildren<Props>> = ({
     <button
       className={classNames(
         {
-          "bg-green": !darkMode,
-          "bg-transparent border-2 border-white text-white": darkMode,
+          "bg-green gap-4 text-[20px] md:text-[26px]": !darkMode,
+          "bg-transparent border-2 border-white text-white gap-2 text-[22px]":
+            darkMode,
         },
-        "flex items-center justify-center gap-4 text-center rounded-md py-3 font-bold uppercase text-[20px] md:text-[26px] px-24",
+        "flex items-center justify-center text-center rounded-md py-3 font-bold uppercase px-24",
         className,
       )}
       {...props}

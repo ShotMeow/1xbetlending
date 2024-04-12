@@ -24,7 +24,7 @@ const PartnersSection: FC = () => {
             <Image
               src="/images/partners/serie-a.png"
               alt="Serie A Logo"
-              className="w-16 md:w-auto"
+              className="w-16 md:w-full"
               width={84}
               height={150}
             />
@@ -33,7 +33,7 @@ const PartnersSection: FC = () => {
             <Image
               src="/images/partners/barcelona.png"
               alt="Barcelona Logo"
-              className="w-16 md:w-auto"
+              className="w-16 md:w-full"
               width={147}
               height={149}
             />
@@ -42,7 +42,7 @@ const PartnersSection: FC = () => {
             <Image
               src="/images/partners/psg.png"
               alt="PSG Logo"
-              className="w-16 md:w-auto"
+              className="w-16 md:w-full"
               width={145}
               height={145}
             />
@@ -51,7 +51,7 @@ const PartnersSection: FC = () => {
             <Image
               src="/images/partners/raja-club.png"
               alt="Raja Club Athletic Logo"
-              className="w-16 md:w-auto"
+              className="w-16 md:w-full"
               width={134}
               height={175}
             />
@@ -60,7 +60,7 @@ const PartnersSection: FC = () => {
             <Image
               src="/images/partners/as-sale.png"
               alt="A.S. Sale Logo"
-              className="w-16 md:w-auto"
+              className="w-16 md:w-full"
               width={157}
               height={193}
             />
@@ -69,7 +69,7 @@ const PartnersSection: FC = () => {
             <Image
               src="/images/partners/caf.png"
               alt="CAF Logo"
-              className="w-16 md:w-auto"
+              className="w-16 md:w-full"
               width={161}
               height={150}
             />
@@ -78,7 +78,7 @@ const PartnersSection: FC = () => {
             <Image
               src="/images/partners/esl.png"
               alt="ESL Logo"
-              className="w-16 md:w-auto"
+              className="w-16 md:w-full"
               width={179}
               height={167}
             />
