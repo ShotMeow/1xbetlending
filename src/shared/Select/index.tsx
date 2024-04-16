@@ -47,7 +47,7 @@ const Select: FC<Props> = ({ darkMode = false, ...props }) => {
   return (
     <div className="relative">
       <Image
-        src={`images/flags/${countryCode}.svg`}
+        src={`images/flags/${countryCode.toLowerCase()}.svg`}
         width={40}
         height={30}
         className="absolute left-4 top-10"
