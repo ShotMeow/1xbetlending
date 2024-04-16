@@ -10,6 +10,8 @@ import welcomeImage from "./images/welcome-image.png";
 import Field from "@/src/shared/Field";
 import Radio from "@/src/shared/Radio";
 import Button from "@/src/shared/Button";
+import Select from "@/src/shared/Select";
+import PhoneField from "@/src/shared/PhoneField";
 
 const FormSection: FC = () => {
   const translate = useTranslations("form-section");
@@ -31,8 +33,8 @@ const FormSection: FC = () => {
             type="email"
             placeholder="example@mail.com"
           />
-          <Field required name={translate("input-3")} />
-          <Field required name={translate("input-4")} type="tel" />
+          <Select required name={translate("input-3")} />
+          <PhoneField required name={translate("input-4")} />
           <div className="mt-10">
             <div className="flex items-center gap-6 mb-2">
               <Radio label="telegram" name="social" />

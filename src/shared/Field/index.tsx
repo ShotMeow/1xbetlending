@@ -10,6 +10,7 @@ const Field: FC<Props> = ({
   withLabel = true,
   darkMode = false,
   name,
+  className,
   ...props
 }) => {
   return (
@@ -21,6 +22,7 @@ const Field: FC<Props> = ({
             "border-ocean-light": darkMode,
           },
           "rounded-md py-3 sm:pt-4 sm:pb-3 px-6 placeholder:text-[16px] md:placeholder:text-[22px] placeholder:uppercase bg-transparent border-2 uppercase flex",
+          className,
         )}
         {...props}
       />

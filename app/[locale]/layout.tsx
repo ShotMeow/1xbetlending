@@ -34,7 +34,7 @@ const Layout: FC<PropsWithChildren<{ params: { locale: string } }>> = ({
   }
 
   return (
-    <html dir={locale === "ar" ? "rtl" : "ltr"} lang={locale}>
+    <html dir={locale === "ae" ? "rtl" : "ltr"} lang={locale}>
       <body className={`${montserrat.variable} ${oxygen.variable}`}>
         <Header />
         {children}

@@ -4,6 +4,8 @@ import Field from "@/src/shared/Field";
 import Radio from "@/src/shared/Radio";
 import Button from "@/src/shared/Button";
 import classNames from "classnames";
+import Select from "@/src/shared/Select";
+import PhoneField from "@/src/shared/PhoneField";
 
 interface Props {
   setIsShown: Dispatch<SetStateAction<boolean>>;
@@ -50,8 +52,8 @@ const Modal: FC<Props> = ({ setIsShown }) => {
             type="email"
             placeholder="example@mail.com"
           />
-          <Field darkMode required name={translateForm("input-3")} />
-          <Field darkMode required name={translateForm("input-4")} type="tel" />
+          <Select darkMode required name={translateForm("input-3")} />
+          <PhoneField darkMode required name={translateForm("input-4")} />
           <div>
             <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 my-2">
               <Radio darkMode label="telegram" name="social" />

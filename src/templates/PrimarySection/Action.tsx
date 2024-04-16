@@ -9,9 +9,6 @@ interface Props extends HTMLAttributes<HTMLDivElement> {}
 
 const isElementOnScreen = (element: HTMLDivElement) => {
   const bounding = element.getBoundingClientRect();
-
-  console.log(bounding.top, bounding.left, bounding.bottom, bounding.right);
-  console.log(window.innerHeight, window.innerWidth);
   return (
     bounding.top >= -300 &&
     bounding.left >= 0 &&
