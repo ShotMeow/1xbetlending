@@ -44,6 +44,11 @@ const Select: FC<Props> = ({ darkMode = false, ...props }) => {
     setCountriesArr(newCountriesArr);
   }, [errorShown, countryName]);
 
+  const handleFocus = () => {
+    setCountriesArr(countries);
+    setDropdownShown(true);
+  };
+
   return (
     <div className="relative">
       <Image
@@ -60,7 +65,7 @@ const Select: FC<Props> = ({ darkMode = false, ...props }) => {
       )}
       <Field
         darkMode={darkMode}
-        onFocus={() => setDropdownShown(true)}
+        onFocus={handleFocus}
         onBlur={() => setTimeout(() => setDropdownShown(false), 100)}
         value={countryName}
         onChange={(event) => {

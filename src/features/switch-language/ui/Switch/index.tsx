@@ -62,7 +62,7 @@ const Switch: FC = () => {
         <li>
           <Link className="flex items-center gap-2" href="/ar">
             <Image src={arFlag} alt="Arabic Flag" width={21} height={21} />
-            <span className="uppercase text-[22px] font-semibold">ae</span>
+            <span className="uppercase text-[22px] font-semibold">ar</span>
           </Link>
         </li>
       </ul>
