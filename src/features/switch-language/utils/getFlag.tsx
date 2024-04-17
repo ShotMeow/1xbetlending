@@ -2,7 +2,7 @@ import Image from "next/image";
 
 import enFlag from "../assets/flags/en.svg";
 import frFlag from "../assets/flags/fr.svg";
-import aeFlag from "../assets/flags/ae.svg";
+import aeFlag from "../assets/flags/ar.svg";
 export const getFlag = (locale: string) => {
   switch (locale) {
     case "en":

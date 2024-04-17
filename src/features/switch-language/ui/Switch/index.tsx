@@ -5,7 +5,7 @@ import { getFlag } from "@/src/features/switch-language/utils/getFlag";
 
 import enFlag from "../../assets/flags/en.svg";
 import frFlag from "../../assets/flags/fr.svg";
-import aeFlag from "../../assets/flags/ae.svg";
+import arFlag from "../../assets/flags/ar.svg";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -60,8 +60,8 @@ const Switch: FC = () => {
           </Link>
         </li>
         <li>
-          <Link className="flex items-center gap-2" href="/ae">
-            <Image src={aeFlag} alt="Arabic Flag" width={21} height={21} />
+          <Link className="flex items-center gap-2" href="/ar">
+            <Image src={arFlag} alt="Arabic Flag" width={21} height={21} />
             <span className="uppercase text-[22px] font-semibold">ae</span>
           </Link>
         </li>
