@@ -15,10 +15,11 @@ const getCountryName = (countryCode: string): string => {
 };
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
   darkMode?: boolean;
 }
 
-const Select: FC<Props> = ({ darkMode = false, ...props }) => {
+const Select: FC<Props> = ({ darkMode = false, label, ...props }) => {
   const [countriesArr, setCountriesArr] = useState<CountryType[]>(countries);
   const [countryCode, setCountryCode] = useState<string>(
     useLocale().toUpperCase(),
@@ -64,6 +65,7 @@ const Select: FC<Props> = ({ darkMode = false, ...props }) => {
         </p>
       )}
       <Field
+        label={label}
         darkMode={darkMode}
         onFocus={handleFocus}
         onBlur={() => setTimeout(() => setDropdownShown(false), 100)}

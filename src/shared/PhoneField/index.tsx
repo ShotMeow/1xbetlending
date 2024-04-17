@@ -6,10 +6,11 @@ import Image from "next/image";
 import { countries } from "@/src/shared/Select/countries.data";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
+  label?: string;
   darkMode?: boolean;
 }
 
-const PhoneField: FC<Props> = ({ darkMode = false, ...props }) => {
+const PhoneField: FC<Props> = ({ darkMode = false, label, ...props }) => {
   const [phone, setPhone] = useState<string>("");
 
   const [countryCode, setCountryCode] = useState<string>(
@@ -43,6 +44,7 @@ const PhoneField: FC<Props> = ({ darkMode = false, ...props }) => {
         alt="Country Flag"
       />
       <Field
+        label={label}
         type="tel"
         onChange={handleChange}
         className="pl-16"

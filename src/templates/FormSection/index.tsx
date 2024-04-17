@@ -1,7 +1,12 @@
 import type { FC } from "react";
-import { useTranslations } from "next-intl";
+import {
+  NextIntlClientProvider,
+  useMessages,
+  useTranslations,
+} from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
+import { useFormState } from "react-dom";
 
 import webSearchIcon from "./images/web-search-icon.png";
 import telegramIcon from "./images/telegram-icon.png";
@@ -12,40 +17,18 @@ import Radio from "@/src/shared/Radio";
 import Button from "@/src/shared/Button";
 import Select from "@/src/shared/Select";
 import PhoneField from "@/src/shared/PhoneField";
+import { sendEmail } from "@/src/features/email-send/utils/actions";
+import Form from "@/src/templates/FormSection/Form";
 
 const FormSection: FC = () => {
+  const messages = useMessages();
   const translate = useTranslations("form-section");
   return (
     <section className="container grid lg:grid-cols-[1fr,2fr] my-20" id="form">
       <div className="flex flex-col items-center">
-        <h2 className="text-[20px] text-center sm:text-[38px] font-bold uppercase">
-          {translate("heading")}
-        </h2>
-        <form className="flex flex-col w-full gap-4">
-          <Field
-            required
-            name={translate("input-1")}
-            placeholder={translate("input-1")}
-          />
-          <Field
-            required
-            name={translate("input-2")}
-            type="email"
-            placeholder="example@mail.com"
-          />
-          <Select required name={translate("input-3")} />
-          <PhoneField required name={translate("input-4")} />
-          <div className="mt-10">
-            <div className="flex items-center gap-6 mb-2">
-              <Radio label="telegram" name="social" />
-              <Radio label="whatsapp" name="social" />
-            </div>
-            <Field withLabel={false} name="social" placeholder="@username" />
-          </div>
-          <Button className="text-[22px] mx-auto mt-6 px-6">
-            {translate("button")}
-          </Button>
-        </form>
+        <NextIntlClientProvider messages={messages}>
+          <Form />
+        </NextIntlClientProvider>
       </div>
       <div className="flex flex-col">
         <div className="flex flex-col items-center lg:items-start lg:ml-40 lg:self-end mt-20 lg:mt-0 gap-10">

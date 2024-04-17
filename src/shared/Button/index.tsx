@@ -1,7 +1,7 @@
-import type { FC, HTMLAttributes, PropsWithChildren } from "react";
+import type { ButtonHTMLAttributes, FC, PropsWithChildren } from "react";
 import classNames from "classnames";
 
-interface Props extends HTMLAttributes<HTMLButtonElement> {
+interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   darkMode?: boolean;
 }
 const Button: FC<PropsWithChildren<Props>> = ({

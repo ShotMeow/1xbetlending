@@ -2,20 +2,14 @@ import type { FC, InputHTMLAttributes } from "react";
 import classNames from "classnames";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
-  withLabel?: boolean;
+  label?: string;
   darkMode?: boolean;
 }
 
-const Field: FC<Props> = ({
-  withLabel = true,
-  darkMode = false,
-  name,
-  className,
-  ...props
-}) => {
+const Field: FC<Props> = ({ darkMode = false, label, className, ...props }) => {
   return (
     <label className="flex flex-col">
-      {withLabel && <span className="uppercase mb-1">{name}*</span>}
+      {label && <span className="uppercase mb-1">{label}*</span>}
       <input
         className={classNames(
           {
