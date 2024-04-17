@@ -39,7 +39,7 @@ const PhoneField: FC<Props> = ({ darkMode = false, ...props }) => {
         src={`images/flags/${countryCode.toLowerCase()}.svg`}
         width={40}
         height={30}
-        className="absolute left-4 top-10"
+        className="absolute left-4 top-10 border border-gray-200 rounded-md"
         alt="Country Flag"
       />
       <Field

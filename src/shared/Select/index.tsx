@@ -55,7 +55,7 @@ const Select: FC<Props> = ({ darkMode = false, ...props }) => {
         src={`images/flags/${countryCode.toLowerCase()}.svg`}
         width={40}
         height={30}
-        className="absolute left-4 top-10"
+        className="absolute left-4 top-10 border border-gray-200 rounded-md"
         alt={countryName}
       />
       {errorShown && (
@@ -102,6 +102,7 @@ const Select: FC<Props> = ({ darkMode = false, ...props }) => {
                 width={40}
                 height={30}
                 alt={country.name}
+                className="border border-gray-200 rounded-md"
               />
               <p className="font-semibold">{country.name}</p>
             </li>
