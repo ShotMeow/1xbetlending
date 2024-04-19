@@ -6,19 +6,11 @@ import {
 } from "next-intl";
 import Link from "next/link";
 import Image from "next/image";
-import { useFormState } from "react-dom";
 
 import webSearchIcon from "./images/web-search-icon.png";
 import telegramIcon from "./images/telegram-icon.png";
 import welcomeImage from "./images/welcome-image.png";
-
-import Field from "@/src/shared/Field";
-import Radio from "@/src/shared/Radio";
-import Button from "@/src/shared/Button";
-import Select from "@/src/shared/Select";
-import PhoneField from "@/src/shared/PhoneField";
-import { sendEmail } from "@/src/features/email-send/utils/actions";
-import Form from "@/src/templates/FormSection/Form";
+import Form from "./Form";
 
 const FormSection: FC = () => {
   const messages = useMessages();

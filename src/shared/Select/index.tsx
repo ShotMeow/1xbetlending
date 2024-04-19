@@ -1,11 +1,10 @@
 "use client";
 import { FC, InputHTMLAttributes, useEffect, useState } from "react";
 import Field from "@/src/shared/Field";
-import { countries } from "@/src/shared/Select/countries.data";
+import { countries, CountryType } from "@/src/features/email-send";
 import Image from "next/image";
 import { useLocale } from "next-intl";
 import classNames from "classnames";
-import { CountryType } from "./countries.types";
 
 const getCountryName = (countryCode: string): string => {
   return (

@@ -6,7 +6,7 @@ import PhoneField from "@/src/shared/PhoneField";
 import Radio from "@/src/shared/Radio";
 import Button from "@/src/shared/Button";
 import { useFormState } from "react-dom";
-import { sendEmail } from "@/src/features/email-send/utils/actions";
+import { sendEmail } from "@/src/features/email-send";
 import { useTranslations } from "next-intl";
 
 const Form: FC = () => {

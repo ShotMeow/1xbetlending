@@ -3,7 +3,7 @@ import React, { FC, InputHTMLAttributes, useState } from "react";
 import Field from "@/src/shared/Field";
 import { useLocale } from "next-intl";
 import Image from "next/image";
-import { countries } from "@/src/shared/Select/countries.data";
+import { countries } from "@/src/features/email-send";
 
 interface Props extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;

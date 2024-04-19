@@ -13,7 +13,7 @@ import classNames from "classnames";
 import Select from "@/src/shared/Select";
 import PhoneField from "@/src/shared/PhoneField";
 import { useFormState } from "react-dom";
-import { sendEmail } from "@/src/features/email-send/utils/actions";
+import { sendEmail } from "@/src/features/email-send";
 
 interface Props {
   setIsShown: Dispatch<SetStateAction<boolean>>;

@@ -1,6 +1,7 @@
 "use server";
 import { Resend } from "resend";
 import FormSend from "../../../../emails/FormSend";
+import { africaCountries } from "@/src/features/email-send";
 interface State {
   error: string | null;
   success: boolean;
@@ -12,7 +13,7 @@ export const sendEmail = async (prevState: State, formData: FormData) => {
   const phone = formData.get("phone") as string;
   const socialType = formData.get("social-type") as "whatsapp" | "telegram";
   const socialNickname = formData.get("social-nickname") as string;
-  console.log(formData);
+
   const social = {
     type: socialType,
     nickname: socialNickname,
@@ -22,7 +23,12 @@ export const sendEmail = async (prevState: State, formData: FormData) => {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: process.env.RESEND_EMAIL_ADDRESS as string,
+      to: africaCountries.find(
+        (africaCountry) =>
+          africaCountry.name.toLowerCase() === country.toLowerCase(),
+      )
+        ? (process.env.RESEND_EMAIL_AFRICA_ADDRESS as string)
+        : (process.env.RESEND_EMAIL_EU_ADDRESS as string),
       subject: "New Form Submission",
       react: (
         <FormSend

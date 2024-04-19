@@ -1,4 +1,61 @@
-import type { CountryType } from "./countries.types";
+import type { CountryType } from "../types/countries.types";
+
+const africaCountryCodes: string[] = [
+  "AL",
+  "AO",
+  "BE",
+  "BO",
+  "BU",
+  "BI",
+  "CM",
+  "CV",
+  "CF",
+  "TD",
+  "KM",
+  "CD",
+  "CG",
+  "DJ",
+  "EG",
+  "GQ",
+  "ER",
+  "SZ",
+  "ET",
+  "GA",
+  "GM",
+  "GH",
+  "GN",
+  "GW",
+  "CI",
+  "KE",
+  "LS",
+  "LR",
+  "LY",
+  "MG",
+  "MW",
+  "ML",
+  "MR",
+  "MU",
+  "MA",
+  "MZ",
+  "NA",
+  "NE",
+  "NG",
+  "RW",
+  "ST",
+  "SN",
+  "SC",
+  "SL",
+  "SO",
+  "ZA",
+  "SS",
+  "SD",
+  "TZ",
+  "TG",
+  "TN",
+  "UG",
+  "ZM",
+  "ZW",
+];
 
 export const countries: CountryType[] = [
   {
@@ -1212,3 +1269,7 @@ export const countries: CountryType[] = [
     code: "ZW",
   },
 ];
+
+export const africaCountries = countries.filter((country) =>
+  africaCountryCodes.includes(country.code.toUpperCase()),
+);
