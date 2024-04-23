@@ -42,93 +42,95 @@ const Modal: FC<Props> = ({ setIsShown }) => {
           success ? "bg-[#015291]" : "bg-white"
         } border-blue-light border rounded-md text-ocean-dark p-4 w-full xl:w-[1000px]`}
       >
-        <Button className="px-4 text-white xl:hidden">
-          {translateForm("button")}
-          <svg
-            width="14"
-            height="24"
-            viewBox="0 0 14 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className={classNames({
-              "rotate-180": document.dir === "rtl",
-            })}
-          >
-            <path
-              d="M13.0607 13.0607C13.6464 12.4749 13.6464 11.5251 13.0607 10.9393L3.51472 1.3934C2.92893 0.807611 1.97919 0.807611 1.3934 1.3934C0.807611 1.97919 0.807611 2.92893 1.3934 3.51472L9.87868 12L1.3934 20.4853C0.807611 21.0711 0.807611 22.0208 1.3934 22.6066C1.97919 23.1924 2.92893 23.1924 3.51472 22.6066L13.0607 13.0607ZM10 13.5H12V10.5H10V13.5Z"
-              fill="white"
-            />
-          </svg>
-        </Button>
         {success ? (
           <div className="w-full uppercase flex flex-col items-center h-full justify-center text-white gap-4 font-bold text-center">
             <h3 className="text-[48px]">{translateForm("success-title")}</h3>
             <p className="text-[24px]">{translateForm("success-subtitle")}</p>
           </div>
         ) : (
-          <div className="flex flex-col justify-center p-4 w-full">
-            <h2 className="text-[20px] text-center md:text-left sm:text-[38px] text-[#015291] font-bold uppercase">
-              {translate("heading")}
-            </h2>
-            <Field
-              darkMode
-              name="name"
-              id="name"
-              required
-              label={translateForm("input-1")}
-              placeholder={translateForm("input-1")}
-            />
-            <Field
-              darkMode
-              name="email"
-              id="email"
-              required
-              label={translateForm("input-2")}
-              type="email"
-              placeholder="example@mail.com"
-            />
-            <Select
-              darkMode
-              name="country"
-              id="country"
-              required
-              label={translateForm("input-3")}
-            />
-            <PhoneField
-              darkMode
-              name="phone"
-              id="phone"
-              required
-              label={translateForm("input-4")}
-            />
-            <div className="mt-10">
-              <div className="flex items-center gap-6 mb-2">
-                <Radio
-                  required
-                  darkMode
-                  label="telegram"
-                  id="telegram"
-                  value="telegram"
-                  name="social-type"
+          <>
+            <Button className="px-4 text-white xl:hidden">
+              {translateForm("button")}
+              <svg
+                width="14"
+                height="24"
+                viewBox="0 0 14 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className={classNames({
+                  "rotate-180": document.dir === "rtl",
+                })}
+              >
+                <path
+                  d="M13.0607 13.0607C13.6464 12.4749 13.6464 11.5251 13.0607 10.9393L3.51472 1.3934C2.92893 0.807611 1.97919 0.807611 1.3934 1.3934C0.807611 1.97919 0.807611 2.92893 1.3934 3.51472L9.87868 12L1.3934 20.4853C0.807611 21.0711 0.807611 22.0208 1.3934 22.6066C1.97919 23.1924 2.92893 23.1924 3.51472 22.6066L13.0607 13.0607ZM10 13.5H12V10.5H10V13.5Z"
+                  fill="white"
                 />
-                <Radio
+              </svg>
+            </Button>
+            <div className="flex flex-col justify-center p-4 w-full">
+              <h2 className="text-[20px] text-center md:text-left sm:text-[38px] text-[#015291] font-bold uppercase">
+                {translate("heading")}
+              </h2>
+              <Field
+                darkMode
+                name="name"
+                id="name"
+                required
+                label={translateForm("input-1")}
+                placeholder={translateForm("input-1")}
+              />
+              <Field
+                darkMode
+                name="email"
+                id="email"
+                required
+                label={translateForm("input-2")}
+                type="email"
+                placeholder="example@mail.com"
+              />
+              <Select
+                darkMode
+                name="country"
+                id="country"
+                required
+                label={translateForm("input-3")}
+              />
+              <PhoneField
+                darkMode
+                name="phone"
+                id="phone"
+                required
+                label={translateForm("input-4")}
+              />
+              <div className="mt-10">
+                <div className="flex items-center gap-6 mb-2">
+                  <Radio
+                    required
+                    darkMode
+                    label="telegram"
+                    id="telegram"
+                    value="telegram"
+                    name="social-type"
+                  />
+                  <Radio
+                    required
+                    darkMode
+                    label="whatsapp"
+                    id="whatsapp"
+                    value="whatsapp"
+                    name="social-type"
+                  />
+                </div>
+                <Field
                   required
                   darkMode
-                  label="whatsapp"
-                  id="whatsapp"
-                  value="whatsapp"
-                  name="social-type"
+                  name="social-nickname"
+                  id="social-nickname"
+                  placeholder="@username"
                 />
               </div>
-              <Field
-                required
-                darkMode
-                name="social-nickname"
-                id="social-nickname"
-                placeholder="@username"
-              />
             </div>
-          </div>
+          </>
         )}
         <div
           className={`bg-[url('/logo-dark.png')] bg-contain bg-no-repeat bg-center w-full h-full xl:w-[506px] xl:h-[calc(100%+60px)] relative xl:-top-8 rounded-lg ${

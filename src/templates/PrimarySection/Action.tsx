@@ -48,7 +48,7 @@ const Action: FC<Props> = ({ ...props }) => {
     <div {...props}>
       <Button
         className={classNames({
-          "fixed bottom-4 left-4 right-4 lg:left-auto z-50": scrolled,
+          "fixed bottom-4 left-4 right-4 lg:left-auto z-40": scrolled,
         })}
         onClick={() => setIsModalShown(true)}
       >
