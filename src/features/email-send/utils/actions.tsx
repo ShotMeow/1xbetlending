@@ -24,8 +24,7 @@ export const sendEmail = async (prevState: State, formData: FormData) => {
     await resend.emails.send({
       from: "onboarding@resend.dev",
       to: africaCountries.find(
-        (africaCountry) =>
-          africaCountry.name.toLowerCase() === country.toLowerCase(),
+        (africaCountry) => africaCountry.name === country,
       )
         ? (process.env.RESEND_EMAIL_AFRICA_ADDRESS as string)
         : (process.env.RESEND_EMAIL_EU_ADDRESS as string),
