@@ -11,7 +11,7 @@ export const getFlag = (locale: string) => {
       );
     case "fr":
       return <Image src={frFlag} alt="France Flag" width={21} height={21} />;
-    case "ae":
+    case "ar":
       return <Image src={aeFlag} alt="Arabic Flag" width={21} height={21} />;
   }
 };
