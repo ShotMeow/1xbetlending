@@ -68,7 +68,7 @@ const Modal: FC<Props> = ({ setIsShown }) => {
               </svg>
             </Button>
             <div className="flex flex-col justify-center p-4 w-full">
-              <h2 className="text-[20px] text-center md:text-left sm:text-[38px] text-[#015291] font-bold uppercase">
+              <h2 className="text-[20px] text-center md:text-left sm:text-[34px] text-[#015291] font-bold uppercase">
                 {translate("heading")}
               </h2>
               <Field
