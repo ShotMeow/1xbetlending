@@ -47,9 +47,9 @@ const FormSection: FC = () => {
             </li>
             <li>
               <Link
-                href="https://t.me/payteam1x"
+                href="https://t.me/menapartnership"
                 target="_blank"
-                className="flex items-center gap-2"
+                className="flex items-center gap-2 uppercase"
               >
                 <Image
                   src={telegramIcon}
@@ -58,7 +58,7 @@ const FormSection: FC = () => {
                   height={50}
                 />
                 <span className="bg-blue-light text-white font-bold text-[22px] rounded-lg p-2">
-                  @PAYTEAM1X
+                  @menapartnership
                 </span>
               </Link>
             </li>

@@ -23,11 +23,7 @@ export const sendEmail = async (prevState: State, formData: FormData) => {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: africaCountries.find(
-        (africaCountry) => africaCountry.name === country,
-      )
-        ? (process.env.RESEND_EMAIL_AFRICA_ADDRESS as string)
-        : (process.env.RESEND_EMAIL_EU_ADDRESS as string),
+      to: process.env.RESEND_EMAIL_ADDRESS as string,
       subject: "New Form Submission",
       react: (
         <FormSend
