@@ -21,7 +21,7 @@ jobs:
 
       - name: Create env file
         run: |
-          echo "NEXT_PUBLIC_I18NEXUS_API_KEY=${{ secrets.I18NEXUS_API_KEY }}" >> .env.local
+          echo "I18NEXUS_API_KEY=${{ secrets.I18NEXUS_API_KEY }}" >> .env.local
           echo "NEXT_PUBLIC_RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> .env.local
           echo "NEXT_PUBLIC_RESEND_EMAIL_ADDRESS=${{ secrets.RESEND_EMAIL_ADDRES }}" >> .env.local
         working-directory: ${{ github.workspace }}
