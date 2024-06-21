@@ -1,0 +1,46 @@
+name: Deploy to Docker Hub and Push to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
+
+      - name: Create env file
+        run: |
+          echo "NEXT_PUBLIC_I18NEXUS_API_KEY=${{ secrets.I18NEXUS_API_KEY }}" >> .env.local
+          echo "NEXT_PUBLIC_RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> .env.local
+          echo "NEXT_PUBLIC_RESEND_EMAIL_ADDRESS=${{ secrets.RESEND_EMAIL_ADDRES }}" >> .env.local
+        working-directory: ${{ github.workspace }}
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: shotmeow/1xbetlending:latest
+
+      - name: SSH and run container
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          port: ${{ secrets.REMOTE_PORT }}
+          username: ${{ secrets.REMOTE_USERNAME }}
+          key: ${{ secrets.REMOTE_KEY }}
+          script: |
+            docker pull shotmeow/1xbetlending:latest
+            docker run shotmeow/1xbetlending:latest --name frontend -d
