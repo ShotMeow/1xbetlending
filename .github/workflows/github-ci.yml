@@ -46,4 +46,4 @@ jobs:
             docker rm frontend
             docker rm shotmeow/1xbetlending:latest
             docker pull shotmeow/1xbetlending:latest
-            docker run shotmeow/1xbetlending:latest --name frontend -d -p 3000:3000
+            docker run shotmeow/1xbetlending:latest --name frontend -p 3000:3000
