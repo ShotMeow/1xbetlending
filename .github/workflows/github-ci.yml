@@ -21,9 +21,9 @@ jobs:
 
       - name: Create env file
         run: |
-          echo "I18NEXUS_API_KEY=${{ secrets.I18NEXUS_API_KEY }}" >> .env.local
-          echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> .env.local
-          echo "RESEND_EMAIL_ADDRESS=${{ secrets.RESEND_EMAIL_ADDRES }}" >> .env.local
+          echo "I18NEXUS_API_KEY=${{ secrets.I18NEXUS_API_KEY }}" >> .env
+          echo "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" >> .env
+          echo "RESEND_EMAIL_ADDRESS=${{ secrets.RESEND_EMAIL_ADDRES }}" >> .env
         working-directory: ${{ github.workspace }}
 
       - name: Build and push Docker image
