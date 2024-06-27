@@ -46,4 +46,4 @@ jobs:
             sudo -s docker rm frontend
             sudo -s docker rm shotmeow/1xbetlending:latest
             sudo -s docker pull shotmeow/1xbetlending:latest
-            sudo -s docker run shotmeow/1xbetlending:latest --name frontend -p 3000:3000
+            sudo -s docker run shotmeow/1xbetlending:latest -d --name frontend -p 127.0.0.1:3000:3000
