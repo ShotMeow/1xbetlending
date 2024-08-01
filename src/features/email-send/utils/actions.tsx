@@ -22,7 +22,7 @@ export const sendEmail = async (prevState: State, formData: FormData) => {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "onboarding@1xpartnership.com",
       to: process.env.RESEND_EMAIL_ADDRESS as string,
       subject: "New Form Submission",
       react: (
