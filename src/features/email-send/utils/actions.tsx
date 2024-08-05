@@ -1,7 +1,6 @@
 "use server";
 import { Resend } from "resend";
 import FormSend from "../../../../emails/FormSend";
-import { africaCountries } from "@/src/features/email-send";
 interface State {
   error: string | null;
   success: boolean;
@@ -22,7 +21,7 @@ export const sendEmail = async (prevState: State, formData: FormData) => {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
-      from: "onboarding@1xpartnership.com",
+      from: "no-reply@1xpartnership.com",
       to: process.env.RESEND_EMAIL_ADDRESS as string,
       subject: "New Form Submission",
       react: (
