@@ -16,7 +16,7 @@ interface Props {
 const FormSend: FC<Props> = ({ name, email, country, phone, social }) => {
   return (
     <Html lang={useLocale()}>
-      <Heading>New Form Submission</Heading>
+      <Heading>New Form Submission </Heading>
       <Text>You just submitted a form. Here are the details:</Text>
       <Text>Name: {name}</Text>
       <Text>Email: {email}</Text>
